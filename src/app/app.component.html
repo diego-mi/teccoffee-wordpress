@@ -1,20 +1,71 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<!--<main style="background: url('./assets/images/bg-geometrico-2.jpg') no-repeat center center; background-size: cover;">-->
+<main>
+  <div class="overlay"></div>
+
+  <div *ngIf="slideId==1" class="slide">
+    <div class="logo-zs">
+      <div class="icon-zarpsystem-vertical"></div>
+      <div class="icon-zarpsystem-horizontal"></div>
+    </div>
+    <div class="logo-wp">
+      <img src="assets/images/wordpress-logo-stacked-rgb.png" alt="">
+    </div>
+  </div>
+
+  <div *ngIf="slideId==2" class="slide slide2">
+    <img src="assets/images/wordpress-logo-stacked-rgb.png" alt="">
+
+    <h1>O mais novo frameword Javascript!</h1>
+  </div>
+
+  <div *ngIf="slideId==3" class="slide slide3">
+    <img src="assets/images/brinks.jpg" alt="">
+  </div>
+
+  <div *ngIf="slideId==4" class="slide slide4 column">
+    <header>
+      <h1>O que é um CMS?</h1>
+      <h2>
+        Os CMS´s (Content Management System – Sistema de Gerenciamento de Conteúdo)<br>
+        sistemas onde o usuário pode editar e criar conteúdo para seus<br>
+        sites com grande facilidade.
+      </h2>
+    </header>
+  </div>
+
+  <div *ngIf="slideId==5" class="slide slide4 column">
+    <header>
+      <h1>O que é o Wordpress?</h1>
+      <h2>
+        O WordPress é um projeto de código aberto que<br>
+        você pode usar para criar sites, blogs ou aplicativos.
+      </h2>
+    </header>
+    <div class="content">
+      <ul class="list-horizontal">
+        <li class="item">
+          <span class="stats">29%</span>
+          <span class="text">Da internet</span>
+        </li>
+        <li class="item">
+          <span class="stats">45 Mil</span>
+          <span class="text">Plugins</span>
+        </li>
+        <li class="item">
+          <span class="stats">5 Mil</span>
+          <span class="text">Temas</span>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+
+  <button class="btn-control left" (click)="voltar()"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+  </button>
+  <button class="btn-control right" (click)="avancar()"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+  </button>
+
+  <input class="current-page" type="text" [(ngModel)]="slideId" name="slideId">
+</main>
 
